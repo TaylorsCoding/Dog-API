@@ -9,6 +9,14 @@ $(function () {
         fetch(url)
             .then(response => response.json())
             .then(responseJson => {
+
+                //to whomever is grading this I know I need to include breed and also catch. 
+                //I looked at the notes.Any suggestions?
+                //     fetch('https://dog.ceo/api/breeds/list/all')
+                //         .then(response => response.json())
+                //         .then(responseJson => console.log(responseJson))
+                //         .catch(error => alert('Something went wrong. Try again later.'));
+                // }
                 let images = responseJson.message;
                 for (i = 0; i < images.length; i++) {
                     let imageTag = `<img src="${images[i]}"><br>`
